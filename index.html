@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <title>Chat App</title>
+  </head>
+  <body id="body">
+    <header></header>
+    <userLogin></userLogin>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCMu7ho-mDOOu8j5CWQz54cEMjMu4ZrqpM",
+        authDomain: "chatapp-e335f.firebaseapp.com",
+        databaseURL: "https://chatapp-e335f.firebaseio.com",
+        projectId: "chatapp-e335f",
+        storageBucket: "chatapp-e335f.appspot.com",
+        messagingSenderId: "521151500259"
+      };
+      firebase.initializeApp(config);
+
+      var database = firebase.database();
+    </script>
+    <script src="bundle.js" charset="utf-8"></script>
+  </body>
+</html>
