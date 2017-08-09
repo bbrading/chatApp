@@ -9,17 +9,20 @@ module.exports = {
   module:{
     loaders:[
       {
-        test: /\.js$/,
+        test: /\.js$|\.tag$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         query: {
-          presets: ["es2015"]
+          presets: ["es2015"],
         }
       },
       {
         test: /\.tag$/,
         loader: "tag-loader",
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        query:{
+          hot: true,
+        }
       }
     ]
   }

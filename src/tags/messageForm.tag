@@ -1,14 +1,13 @@
-<messageForm>
-  <form onsubmit={appendMessage}>
-    <input id="username" type="text" name="user" placeholder="type message here">
+<messageForm id="messageFormTag">
+  <form onsubmit={appendMessage} id="messageForm">
+    <input id="messageInput" type="text" name="message" placeholder="chat">
     <input type="submit" value="Send">
   </form>
   <script>
     this.appendMessage = function(){
-      debugger
       var firebaseRef = firebase.database().ref();
-      var name = document.getElementById("username").value;
-      firebaseRef.child("User").set(name)
+      var name = document.getElementById("messageInput").value;
+      firebaseRef.child("Messages").push(name)
     }
   </script>
 </messageForm>
